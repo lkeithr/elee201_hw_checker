@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework Answer Checker</title>
+
+    <!-- ✅ FIXED SheetJS import -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* ✅ Banner centered and reduced */
+        .banner img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 15px 0;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .content {
+            margin: 30px;
+        }
+
+        .problem {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 130px;
+        }
+
+        input {
+            width: 120px;
+            margin-bottom: 5px;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .check-btn {
+            background-color: #28a745;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .check-btn:hover {
+            background-color: #218838;
+        }
+
+        #scoreDisplay {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .instructions {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ✅ Banner -->
+<div class="banner">
+    <img src="gcc_ece_logo.png" alt="GCC ECE Logo">
+</div>
+
+<!-- ✅ Title -->
+<div class="title">
+    GCC ELEE 201 Homework Checker
+</div>
+
+<div class="content">
+
+    <!-- ✅ NEW Instruction Text -->
+    <div class="instructions">
+        Please select your homework set from the dropdown:
+    </div>
+
+    <select id="sheetSelect" onchange="loadSheet()"></select>
+
+    <p>
+        (Optional) Change answer key file:
+        <input type="file" id="fileInput" accept=".xlsx">
+    </p>
+
+    <div id="problems"></div>
+
+    <div id="scoreDisplay">Score: --</div>
+
+    <button class="check-btn" onclick="checkAnswers()">
+        Check Answers
+    </button>
+
+</div>
+
+<!-- ✅ Proper script include -->
+<script src="app.js"></script>
+
+</body>
+</html>

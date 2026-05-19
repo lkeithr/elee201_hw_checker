@@ -1,5 +1,7 @@
 ELEE 201 Homework Checker
+
 Dr. Rumbaugh, Grove City College
+
 Fall 2026
 
 This checker is for your convenience so you will know if your homework answers are correct. 

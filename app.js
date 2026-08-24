@@ -11,7 +11,7 @@ window.onload = function () {
 function loadDefaultWorkbook() {
     console.log("Attempting to load workbook...");
 
-    fetch("elee201_hw_answers.xlsx")
+    fetch("elee201_hw_answers_complete.xlsx")
         .then(response => {
             console.log("Fetch response:", response);
             return response.arrayBuffer();
